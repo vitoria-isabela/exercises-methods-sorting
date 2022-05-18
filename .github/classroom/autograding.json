@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "Compilacao",
+      "setup": "rm -rf build && cmake -B build",
+      "run": "cmake --build build",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_Importacao1000",
+      "setup": "touch dataset.bin",
+      "run": "./build/tests/test1 ./tests/input/siga1000.csv",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n0 registros de estudantes\r\nImportando dados do arquivo ./tests/input/siga1000.csv\r\nImportacao concluida: 1000 novos alunos cadastrados",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_BubbleSort",
+      "setup": "",
+      "run": "./build/tests/test2 test2.csv ",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_SelectioSort",
+      "setup": "",
+      "run": "./build/tests/test3 test3.csv",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n1000 registros de estudantes",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_InsertSort",
+      "setup": "",
+      "run": "./build/tests/test4 test4.csv",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n1000 registros de estudantes",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_Reimporta1000",
+      "setup": "",
+      "run": "./build/tests/test5 tests/input/siga1000.csv",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n1000 registros de estudantes\r\nImportando dados do arquivo tests/input/siga1000.csv\r\nImportacao concluida: 0 novos alunos cadastrados",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_Importa2000",
+      "setup": "",
+      "run": "./build/tests/test5 tests/input/siga2000.csv ",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n1000 registros de estudantes\r\nImportando dados do arquivo tests/input/siga2000.csv\r\nImportacao concluida: 1999 novos alunos cadastrados",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_SelectionSort",
+      "setup": "",
+      "run": "./build/tests/test6 test6.csv",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n2999 registros de estudantes",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_OrdenaPorCurso",
+      "setup": "",
+      "run": "./build/tests/test7 test7.csv",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n2999 registros de estudantes",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Teste_Import5000",
+      "setup": "",
+      "run": "./build/tests/test8 tests/input/siga5000.csv test8.csv",
+      "input": "",
+      "output": "SIGA: Inicializado com sucesso\r\n2999 registros de estudantes\r\nImportando dados do arquivo tests/input/siga5000.csv\r\nImportacao concluida: 5000 novos alunos cadastrados",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
